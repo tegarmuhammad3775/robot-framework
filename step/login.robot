@@ -2,26 +2,22 @@
 Library          SeleniumLibrary
 Suite Setup      Open Browser    ${WebSauceDemo}  ${BROWSER}
 Suite Teardown   Close Browser
+Variables        ../resources/login_locator.yaml
 
 *** Variables ***
 ${WebSauceDemo}    https://www.saucedemo.com/v1/index.html
 ${BROWSER}         chrome
 
-#Locator
-${UsernameField}   //input[@id='user-name']
-${PasswordField}   //input[@id='password']
-${LoginButton}     //*[@id="login-button"]
-
 
 *** Keywords ***
 Input username    
-    Input Text    ${UsernameField}    standard_user
+    Input Text    ${txtUsername}    standard_user
 Input password
-    Input Text  ${PasswordField}    secret_sauce
+    Input Text  ${txtPassword}    secret_sauce
 Input invalid username    
-    Input Text    ${UsernameField}    standard_invalid
+    Input Text    ${txtUsername}    standard_invalid
 Click button login
-    Click Element    ${LoginButton}
+    Click Element    ${btnLogin}
     Sleep   1s
 Verify on login page
     Page Should Contain    Products

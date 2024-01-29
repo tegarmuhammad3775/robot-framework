@@ -1,56 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-01-29T15:37:45.277891" rpa="false" schemaversion="5">
-<suite id="s1" name="Login" source="e:\[MySkill - Quality Assurance]\Latihan\Robot Framework\myskill-robotframework\login.robot">
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-01-29T15:54:58.689229" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="e:\[MySkill - Quality Assurance]\Latihan\Robot Framework\myskill-robotframework\step\login.robot">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-01-29T15:37:45.514921" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/index.html'.</msg>
+<msg time="2024-01-29T15:54:58.957221" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/index.html'.</msg>
 <arg>${WebSauceDemo}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-01-29T15:37:45.513889" elapsed="4.224124"/>
+<status status="PASS" start="2024-01-29T15:54:58.957221" elapsed="4.186494"/>
 </kw>
-<test id="s1-t1" name="User login with invalid data" line="37">
-<kw name="Input invalid username">
+<test id="s1-t1" name="User login with valid data" line="27">
+<kw name="Input username">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-29T15:37:49.741013" level="INFO">Typing text 'standard_invalid' into text field '//input[@id='user-name']'.</msg>
-<arg>${UsernameField}</arg>
-<arg>standard_invalid</arg>
+<msg time="2024-01-29T15:55:03.146715" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<arg>${txtUsername}</arg>
+<arg>standard_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-29T15:37:49.740014" elapsed="0.122354"/>
+<status status="PASS" start="2024-01-29T15:55:03.145713" elapsed="0.125822"/>
 </kw>
-<status status="PASS" start="2024-01-29T15:37:49.739013" elapsed="0.124350"/>
+<status status="PASS" start="2024-01-29T15:55:03.144737" elapsed="0.126798"/>
 </kw>
 <kw name="Input password">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-29T15:37:49.864366" level="INFO">Typing text 'secret_sauce' into text field '//input[@id='password']'.</msg>
-<arg>${PasswordField}</arg>
+<msg time="2024-01-29T15:55:03.273536" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<arg>${txtPassword}</arg>
 <arg>secret_sauce</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-29T15:37:49.864366" elapsed="0.089998"/>
+<status status="PASS" start="2024-01-29T15:55:03.272537" elapsed="0.099087"/>
 </kw>
-<status status="PASS" start="2024-01-29T15:37:49.863363" elapsed="0.091999"/>
+<status status="PASS" start="2024-01-29T15:55:03.272537" elapsed="0.099087"/>
 </kw>
 <kw name="Click button login">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-29T15:37:49.956363" level="INFO">Clicking element '//*[@id="login-button"]'.</msg>
-<arg>${LoginButton}</arg>
+<msg time="2024-01-29T15:55:03.372624" level="INFO">Clicking element 'login-button'.</msg>
+<arg>${btnLogin}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-29T15:37:49.956363" elapsed="0.063005"/>
+<status status="PASS" start="2024-01-29T15:55:03.372624" elapsed="45.097767"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-01-29T15:37:51.021396" level="INFO">Slept 1 second.</msg>
+<msg time="2024-01-29T15:55:49.470816" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-01-29T15:37:50.020369" elapsed="1.001027"/>
+<status status="PASS" start="2024-01-29T15:55:48.470391" elapsed="1.001343"/>
 </kw>
-<status status="PASS" start="2024-01-29T15:37:49.955362" elapsed="1.066034"/>
+<status status="PASS" start="2024-01-29T15:55:03.372624" elapsed="46.100096"/>
 </kw>
-<status status="PASS" start="2024-01-29T15:37:49.738013" elapsed="1.284389"/>
+<kw name="Verify on login page">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-01-29T15:55:49.506651" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-01-29T15:55:49.476661" elapsed="0.029990"/>
+</kw>
+<status status="PASS" start="2024-01-29T15:55:49.475681" elapsed="0.030970"/>
+</kw>
+<status status="PASS" start="2024-01-29T15:55:03.143715" elapsed="46.363943"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-01-29T15:37:51.025396" elapsed="2.166543"/>
+<status status="PASS" start="2024-01-29T15:55:49.509655" elapsed="2.166232"/>
 </kw>
-<status status="PASS" start="2024-01-29T15:37:45.294887" elapsed="7.897052"/>
+<status status="PASS" start="2024-01-29T15:54:58.696219" elapsed="52.979668"/>
 </suite>
 <statistics>
 <total>
