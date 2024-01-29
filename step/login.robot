@@ -3,7 +3,6 @@ Library          SeleniumLibrary
 Suite Setup      Open Browser    ${WebSauceDemo}  ${BROWSER}
 Suite Teardown   Close Browser
 
-
 *** Variables ***
 ${WebSauceDemo}    https://www.saucedemo.com/v1/index.html
 ${BROWSER}         chrome
