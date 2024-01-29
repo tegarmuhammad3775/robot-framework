@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-01-29T15:37:45.277891" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="e:\[MySkill - Quality Assurance]\Latihan\Robot Framework\myskill-robotframework\login.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-01-29T15:37:45.514921" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/index.html'.</msg>
+<arg>${WebSauceDemo}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-29T15:37:45.513889" elapsed="4.224124"/>
+</kw>
+<test id="s1-t1" name="User login with invalid data" line="37">
+<kw name="Input invalid username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T15:37:49.741013" level="INFO">Typing text 'standard_invalid' into text field '//input[@id='user-name']'.</msg>
+<arg>${UsernameField}</arg>
+<arg>standard_invalid</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T15:37:49.740014" elapsed="0.122354"/>
+</kw>
+<status status="PASS" start="2024-01-29T15:37:49.739013" elapsed="0.124350"/>
+</kw>
+<kw name="Input password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T15:37:49.864366" level="INFO">Typing text 'secret_sauce' into text field '//input[@id='password']'.</msg>
+<arg>${PasswordField}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T15:37:49.864366" elapsed="0.089998"/>
+</kw>
+<status status="PASS" start="2024-01-29T15:37:49.863363" elapsed="0.091999"/>
+</kw>
+<kw name="Click button login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T15:37:49.956363" level="INFO">Clicking element '//*[@id="login-button"]'.</msg>
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T15:37:49.956363" elapsed="0.063005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-29T15:37:51.021396" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-29T15:37:50.020369" elapsed="1.001027"/>
+</kw>
+<status status="PASS" start="2024-01-29T15:37:49.955362" elapsed="1.066034"/>
+</kw>
+<status status="PASS" start="2024-01-29T15:37:49.738013" elapsed="1.284389"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-29T15:37:51.025396" elapsed="2.166543"/>
+</kw>
+<status status="PASS" start="2024-01-29T15:37:45.294887" elapsed="7.897052"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
